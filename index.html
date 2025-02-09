@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Project</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#0077C0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>NASA</h1>
+        <p>Project</p>
+    </header>
+    <figure class="hero">
+        <img src="./images/hero.jpg" alt="">
+    </figure>
+    <main>
+        <div class="main__intro">
+            <h2>Welcome!</h2>
+            <hr>
+            <p>Here you're going to get a picture directly taken from <strong>Space!</strong></p>
+            <p>All you have to do is input a date and time and you'll get a recent picture taken by <a target="_blank" href="https://landsat.gsfc.nasa.gov/satellites/landsat-8/">Landsat 8</a>, a satallite launched by NASA in 2013. And then that picture it's going to be compared 10 years ago.</p>
+        </div>
+        <div class="main__input">
+            <h2>INPUT YOUR DATA HERE</h2>
+            <div class="main__input-data-container">
+                <p>Longitude:</p>
+                <input type="text" placeholder="Longitude" id="lon">
+                <p>Latitude:</p>
+                <input type="text" placeholder="Latitude" id="lat">
+                <p>Date (optional):</p>
+                <input type="date" value="2025-02-08" id="date">
+            </div>
+            <button onclick="collectData()">Get image!</button>
+            <figure class="main__input-result">
+                <div class="loader inactive" id="loader"></div>
+                <img id="main__input-result-img" src="" alt="">
+            </figure>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

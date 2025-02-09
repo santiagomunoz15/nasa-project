@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Funnel Sans", serif;
+}
+
+:root {
+    --titles: #1D242B;
+    --text: #0077C0;
+    --light-blue: #FAFAFA;
+}
+
+img {
+    width: 100%;
+}
+
+.inactive {
+    display: none;
+}
+
+h1 {
+    color: var(--titles);
+    font-weight: 900;
+}
+
+header {
+    background-color: var(--light-blue);
+    padding: 20px 5%;
+    display: flex;
+    color: var(--text);
+    align-items: baseline;
+    gap: 4px;
+}
+
+main {
+    padding: 20px 5%;
+}
+
+.main__intro h2 {
+    text-align: center;
+}
+
+.main__intro hr {
+    margin: 10px auto 20px auto;
+    background-color: var(--text);
+    height: 3px;
+    width: 120px;
+    border: none;
+}
+
+.main__intro a {
+    color: var(--text);
+    font-style: italic;
+}
+
+.main__input {
+    background-color: var(--text);
+    color: var(--light-blue);
+    padding: 5%;
+    margin: 28px 0;
+    border-radius: 20px;
+}
+
+.main__input h2 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.main__input-data-container {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 30px 30px;
+    gap: 8px;
+}
+
+.main__input input {
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.main__input button {
+    display: grid;
+    margin: 0 auto;
+    height: 34px;
+    width: 140px;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--titles);
+    color: var(--text);
+    font-weight: 700;
+}
+
+
+.main__input-result {
+    margin-top: 20px;
+    background-color: var(--titles);
+    min-height: 310px;
+    width: 100%;
+    border-radius: 12px;
+    display: grid;
+    place-content: center center;
+}
+
+.loader {
+    border: 2px solid var(--light-blue);
+    border-top: 2px solid var(--text);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
